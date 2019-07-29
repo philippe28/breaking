@@ -82,15 +82,15 @@
 
                 }
                 &.deceased{
-                    color: red
-                    border-color: red
+                    color: red;
+                    border-color: red;
 
                     &:hover{
                         transform: scale(1.05);
                         cursor: pointer;
-                        border-color: red
+                        border-color: red;
                         color: white;
-                        background-color: red
+                        background-color: red;
                     }
 
                 }
