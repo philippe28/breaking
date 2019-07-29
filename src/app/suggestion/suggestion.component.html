@@ -1,0 +1,57 @@
+<div class="app-suggestion">
+    <div class="header">
+      <div>
+        <img src="./assets/img/breaking-bad-vector-logo.svg" alt="">
+      </div>
+  
+      <div class="tabs">
+          <div>
+              <h4>
+                  <a href="/sugestao" >Sugestão</a> 
+                </h4>
+            </div>
+            <div>
+              <h4>
+                  <a href="/episodios" >Episodios</a> 
+                </h4>
+            </div>
+
+      </div>
+  
+
+    </div>
+  
+  
+    <h2 *ngIf='filterStatus.search'>Você pesquisou por "{{filterStatus.search}}"</h2>
+  
+    <div class="box" >
+  
+      <!-- <div class="card" *ngFor="let character of characters | async as characters; let i = index;" [ngStyle]="{'background-image':'url(' + character.img + ')'}"> -->
+  <div class="box-form">
+    <h2 class="toast" [ngClass]="toast">Enviado com Sucesso</h2>
+          <form [formGroup]="profileForm">
+            <div>
+              <div>
+                  <div><span>Seu Nome:</span></div>
+                  <div>
+                <input type="text" formControlName="author">
+              </div>
+              </div>
+            <br>
+              <div>
+                <div><span>Mensagem:</span></div>
+                <div>
+                <textarea type="text" formControlName="message"></textarea>
+              </div>
+              </div>
+            </div>
+            <div>
+                <button (click)="submitSugestion()" >Enviar</button>
+              
+            </div>
+            </form>
+
+    </div>
+
+  </div>
+  </div>

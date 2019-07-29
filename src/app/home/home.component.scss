@@ -1,0 +1,223 @@
+.app-home{
+    background: rgb(6, 7, 7);
+    color: white;
+    padding: 0px 10%;
+    // height: 100vh;
+    a {
+        color: white;
+        text-decoration: none; /* no underline */
+      }
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    img{
+        max-width: 100px;
+    }
+.tabs{
+    display: flex;
+    div{
+        margin: 0px 10px;
+    }
+}
+    input{
+        background: transparent;
+        border: none;
+        border-bottom: solid rgb(160, 160, 160) 1px;
+        color: white;
+        outline: none;
+        &:focus{
+            //border: none;
+        }
+    }
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .filter-buttons{
+        display: flex;
+        justify-content: space-around;
+        div{
+            padding:4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button{
+                background: transparent;
+                color: white;
+                // border-color: red;
+                border-style: solid;
+                height: 35px;
+                width: 80px;
+                outline: none;
+
+                color: white;
+                border-color: white;
+
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+                    
+                    color: black;
+                    background-color: white;
+                }
+
+                &.alive{
+                    border-color: green;
+                    color: green;
+
+
+                    &:hover{
+                        transform: scale(1.05);
+                        cursor: pointer;
+                        border-color: green;
+                        color: white;
+                        background-color: green
+                    }
+
+                }
+                &.deceased{
+                    color: rgb(169, 199, 34);
+                    border-color: rgb(169, 199, 34);
+
+                    &:hover{
+                        transform: scale(1.05);
+                        cursor: pointer;
+                        border-color: rgb(169, 199, 34);
+                        color: white;
+                        background-color: rgb(169, 199, 34);
+                    }
+
+                }
+                &.filter-button-all{
+                    color: white;
+                    border-color: white;
+
+                    &:hover{
+                        transform: scale(1.05);
+                        cursor: pointer;
+                        
+                        color: black;
+                        background-color: white;
+                    }
+                }
+
+
+
+            }
+        }
+    }
+}
+
+.card-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    .card{
+        width: 300px;
+        height: 400px;
+        margin-bottom: 50px;
+        background:rgb(204, 202, 202);
+        // width: 30%;
+        // margin: 10px 10px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:hover{
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+        &:not(:hover){
+            // transform: scale(2.05);         
+        }
+
+        .card-information{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            /* align-content: flex-end; */
+            flex-direction: column;
+            justify-content: space-between;
+.card-footer{
+    padding: 10px 10px;
+    background: rgba(31, 28, 28, 0.54);
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+        }
+
+        .card-tag{
+            width: 95px;
+            height: 35px;
+            // background: red;
+
+            float: right;
+            margin-top: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.alive{
+                background: green;
+            }
+
+            &.deceased{
+                background: red;
+            }
+
+        }
+
+    }
+
+}
+
+}
+
+@media screen and (max-width: 600px) {
+    .app-home{
+
+        .header{
+            position: fixed;
+            /* margin-bottom: 50px; */
+            top: 0;
+            background: #060707;
+            width: 100%;
+            z-index: 9;
+        }
+        .filter {
+            margin-top: 100px;
+            flex-direction: column;
+            .filter-buttons{
+                margin-bottom: 20px;
+            }
+
+            .filter-buttons >div >span{
+                display:none;
+            }
+        }
+
+        .card:hover{
+            transform: scale(1)!important;
+            cursor: none;
+        }
+
+        .tabs div{
+            margin: 0px 10px 0px 0px!important;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+        }
+    }
+}

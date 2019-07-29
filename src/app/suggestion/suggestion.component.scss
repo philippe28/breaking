@@ -1,0 +1,125 @@
+.app-suggestion{
+    background: rgb(6, 7, 7);
+    color: white;
+    padding: 0px 10%;
+    // height: 100vh;
+    .box{
+        height: 100vh;
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+    
+    }
+    input{
+        background: transparent;
+        border: none;
+        border-bottom: solid rgb(160, 160, 160) 1px;
+        color: white;
+        outline: none;
+
+    min-width: 40%;
+        &:focus{
+            //border: none;
+        }
+    }
+
+    textarea{
+        background: transparent;
+        border: none;
+        border: solid rgb(160, 160, 160) 1px;
+        color: white;
+        outline: none;
+        min-width: 40%;
+        min-height: 20vh;
+        margin: 0px;
+        width: 618px;
+        height: 252px;
+        width: 100%;
+    }
+
+    a {
+      color: white;
+      text-decoration: none; /* no underline */
+    }
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+    img{
+        max-width: 100px;
+    }
+.tabs{
+    display: flex;
+    div{
+        margin: 0px 10px;
+    }
+}
+    input{
+        background: transparent;
+        border: none;
+        border-bottom: solid rgb(160, 160, 160) 1px;
+        color: white;
+        outline: none;
+        &:focus{
+            //border: none;
+        }
+    }
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+.toast{
+    text-align: center;
+    color: #ffffff;
+    background: #336429;
+    padding: 13px;
+    opacity: 1;
+    transition: opacity .5s linear;
+    // opacity: 0;
+    
+
+    &.hide{
+        
+        opacity: 0;
+        
+        pointer-events: none;
+    }
+}
+button{
+    background: transparent;
+    color: white;
+    border-style: solid;
+    height: 35px;
+    width: 100%;
+    outline: none;
+    color: white;
+    border-color: white;
+    margin: 21px 0px;
+
+    &:hover{
+        // transform: scale(1.05);
+        cursor: pointer;
+        
+        color: black;
+        background-color: white;
+    }
+    textarea{
+    height: 250px!important;
+    width: 250px!important;
+    padding: 0;
+    }
+    .toast{
+        width: 250px;
+    }
+
+
+}
+
+}

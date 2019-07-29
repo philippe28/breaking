@@ -1,0 +1,84 @@
+<div class="app-home">
+  <div class="header">
+    <div>
+      <img src="./assets/img/breaking-bad-vector-logo.svg" alt="">
+    </div>
+    <div class="menu">
+    <div class="tabs">
+        <div>
+            <h4>
+                <a href="/sugestao" >Sugestão</a> 
+              </h4>
+          </div>
+          <div>
+            <h4>
+                <a href="/episodios" >Episodios</a> 
+              </h4>
+          </div>
+    </div>
+
+    <div>
+      <input type="text" [(ngModel)]="filterStatus.search" placeholder="Pesquise os personagens" (input)="onSearch($event.target.value)">
+    </div>
+  </div>
+  </div>
+  <div class="filter">
+
+    <div>
+      <h2>Personagens</h2>
+    </div>
+
+    <div class="filter-buttons">
+      <div><span>Filtre por:</span></div>
+      <div *ngFor="let filterButton of filterButtons">
+        <button [ngClass]="filterButton.statusClassCss" (click)="filterClick(filterButton.statusClassCss)">
+          <span>{{filterButton.title}}</span>
+        </button>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <h2 *ngIf='filterStatus.search'>Você pesquisou por "{{filterStatus.search}}"</h2>
+
+  <div class="card-list">
+
+    <!-- <div class="card" *ngFor="let character of characters | async as characters; let i = index;" [ngStyle]="{'background-image':'url(' + character.img + ')'}"> -->
+
+
+    <div class="card" *ngFor="let character of characters | filterCharacters:characters:filterStatus; let i = index;"
+      [ngStyle]="{'background-image':'url(' + character.img + ')'}">
+
+
+      <div class="card-information">
+        <div class="card-header">
+          <div class="card-tag" [ngClass]="character.statusClassCss">
+            <div> <span>{{character.statusTranslations}}</span></div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <div class="card-name">
+            <span> {{character.name}}</span>
+          </div>
+          <div class="card-birth">
+            <span> {{character.birthday}}</span>
+          </div>
+
+          <div class="card-resume">
+
+            <span *ngFor="let item of character.occupation;let j = index;">
+
+              {{j === 0 ? item : ', '+item}}
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>

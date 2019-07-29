@@ -1,0 +1,65 @@
+<div class="app-episodes">
+  <div class="header">
+    <div>
+      <img src="./assets/img/breaking-bad-vector-logo.svg" alt="">
+    </div>
+
+    <div class="tabs">
+      <div>
+        <h4>
+            <a href="/personagens" >Personagens</a> 
+          </h4>
+      </div>
+      <div>
+        <h4>
+            <a href="/sugestao" >Sugestão</a> 
+          </h4>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+  <div class="card-list">
+
+    <!-- <div class="card" *ngFor="let character of characters | async as characters; let i = index;" [ngStyle]="{'background-image':'url(' + character.img + ')'}"> -->
+
+
+    <div class="card" *ngFor="let episode of episodes ">
+      <div class="description">
+        <div class="title">
+          <h2>{{episode.title}}</h2>
+        </div>
+        <div class="sub-title">
+          <div><h4> Temporada : {{episode.season}}</h4></div>
+          <div><h5>Episodio :{{episode.episode}}</h5></div>
+          </div>
+ 
+      </div>
+
+      <div class="description">
+          <div class="title">
+            <h2>Data de Estreia:</h2>
+            <h2 class="date">{{episode.air_date}}</h2>
+          </div>
+
+   
+        </div>
+        <div class="characters">
+            <div class="title" *ngFor="let item of episode.characters">
+              
+              <p> <a href="/personagens?character={{item}}" >{{item}}</a> </p>
+            </div>
+  
+     
+          </div>
+
+
+
+    </div>
+  </div>
+
+</div>
