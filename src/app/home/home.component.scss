@@ -82,15 +82,15 @@
 
                 }
                 &.deceased{
-                    color: rgb(169, 199, 34);
-                    border-color: rgb(169, 199, 34);
+                    color: red
+                    border-color: red
 
                     &:hover{
                         transform: scale(1.05);
                         cursor: pointer;
-                        border-color: rgb(169, 199, 34);
+                        border-color: red
                         color: white;
-                        background-color: rgb(169, 199, 34);
+                        background-color: red
                     }
 
                 }
